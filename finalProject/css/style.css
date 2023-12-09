@@ -1,0 +1,66 @@
+
+h1 {text-align:center; }
+.grid{
+	display:grid;
+	grid-template-columns: 95%;
+	
+	column-gap: 10px;
+}
+
+body{padding:.5em;}
+
+.grid img{
+	border-radius: 10%;
+	width:100%;
+}
+
+figure figcaption {
+	text-align: center;
+
+}
+
+
+
+@media only screen and (min-width: 772px) {
+  
+  .grid{
+	
+	column-gap: 10px;
+    grid-template-columns: 50% 50%;
+
+  }
+
+  .grid figure:nth-child(7){
+  	grid-column: 1 / span 2;
+
+  }
+  .grid img{
+  	border-radius: 70%;
+  	border:4px solid black;
+
+  }
+}
+
+@media only screen and (min-width: 992px) {
+	.grid figure:nth-child(3n) {
+		grid-column: 1 / span 2;
+	}
+	.grid img{
+		border-radius: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+      --animation-duration: 0;
+    }
+  }
+
+@media (prefers-color-scheme: dark) {
+	grid figure{
+  		background-color: black;
+  		color: yellow;
+  		border: 4px solid black;}
+}
+  	
+
